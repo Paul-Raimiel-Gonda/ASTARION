@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "wWpcvn4zfUc=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Raim\\Desktop\\programmingactivities\\9 DESIGN AND ALGORITHM ANALYSIS\\ASTARION\\PROJECT ASTARION\\ASTARION\\ASTARION\\ASTARION.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Raim\\.nuget\\packages\\raylib-cs\\5.0.0\\raylib-cs.5.0.0.nupkg.sha512",
+    "C:\\Users\\Raim\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
