@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ASTARION")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9d849c53035a806f070627390f14516dda710a39")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+492a0b7d3116673b3b27e49c30e06788d19e56b4")]
 [assembly: System.Reflection.AssemblyProductAttribute("ASTARION")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ASTARION")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

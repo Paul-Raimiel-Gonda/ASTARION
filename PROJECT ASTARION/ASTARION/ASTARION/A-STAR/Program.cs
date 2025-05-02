@@ -208,7 +208,7 @@ namespace ASTARION
             };
 
             Grid grid = new Grid(gridData);
-            Node start = grid.Nodes[0, 0];
+            Node start = grid.Nodes[0, 1];
             Node target = grid.Nodes[9, 9];
 
             // Find paths using both algorithms
@@ -246,6 +246,19 @@ namespace ASTARION
                     }
                 }
 
+                
+
+                // Draw A* path
+                if (aStarPath != null)
+                {
+                    foreach (Node node in aStarPath)
+                    {
+                        if (node.Equals(start) || node.Equals(target)) continue;
+                        Raylib.DrawRectangle(node.X * cellSize, node.Y * cellSize,
+                                           cellSize - 2, cellSize - 2, Color.BLUE);
+                    }
+                }
+
                 // Draw all paths if toggled
                 if (showAllPaths && allPaths != null)
                 {
@@ -261,20 +274,9 @@ namespace ASTARION
                                     path[i + 1].X * cellSize + cellSize / 2,
                                     path[i + 1].Y * cellSize + cellSize / 2),
                                 2,
-                                new Color(100, 100, 255, 128)  // Semi-transparent blue
+                                new Color(255, 165, 0, 128)  // Semi-transparent blue
                             );
                         }
-                    }
-                }
-
-                // Draw A* path
-                if (aStarPath != null)
-                {
-                    foreach (Node node in aStarPath)
-                    {
-                        if (node.Equals(start) || node.Equals(target)) continue;
-                        Raylib.DrawRectangle(node.X * cellSize, node.Y * cellSize,
-                                           cellSize - 2, cellSize - 2, Color.BLUE);
                     }
                 }
 
