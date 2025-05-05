@@ -3,8 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\Raim\\Desktop\\programmingactivities\\9 DESIGN AND ALGORITHM ANALYSIS\\ASTARION\\PROJECT ASTARION\\ASTARION\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{68F8BE13-8066-49D6-A7F6-CA48ECF9298E}|ASTARION\\ASTARION.csproj|c:\\users\\raim\\desktop\\programmingactivities\\9 design and algorithm analysis\\astarion\\project astarion\\astarion\\astarion\\a-star\\shortestpathtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68F8BE13-8066-49D6-A7F6-CA48ECF9298E}|ASTARION\\ASTARION.csproj|solutionrelative:astarion\\a-star\\shortestpathtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68F8BE13-8066-49D6-A7F6-CA48ECF9298E}|ASTARION\\ASTARION.csproj|c:\\users\\raim\\desktop\\programmingactivities\\9 design and algorithm analysis\\astarion\\project astarion\\astarion\\astarion\\a-star\\dynamictest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68F8BE13-8066-49D6-A7F6-CA48ECF9298E}|ASTARION\\ASTARION.csproj|solutionrelative:astarion\\a-star\\dynamictest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68F8BE13-8066-49D6-A7F6-CA48ECF9298E}|ASTARION\\ASTARION.csproj|c:\\users\\raim\\desktop\\programmingactivities\\9 design and algorithm analysis\\astarion\\project astarion\\astarion\\astarion\\a-star\\grid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68F8BE13-8066-49D6-A7F6-CA48ECF9298E}|ASTARION\\ASTARION.csproj|solutionrelative:astarion\\a-star\\grid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{68F8BE13-8066-49D6-A7F6-CA48ECF9298E}|ASTARION\\ASTARION.csproj|c:\\users\\raim\\desktop\\programmingactivities\\9 design and algorithm analysis\\astarion\\project astarion\\astarion\\astarion\\a-star\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{68F8BE13-8066-49D6-A7F6-CA48ECF9298E}|ASTARION\\ASTARION.csproj|solutionrelative:astarion\\a-star\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68F8BE13-8066-49D6-A7F6-CA48ECF9298E}|ASTARION\\ASTARION.csproj|c:\\users\\raim\\desktop\\programmingactivities\\9 design and algorithm analysis\\astarion\\project astarion\\astarion\\astarion\\a-star\\testcase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68F8BE13-8066-49D6-A7F6-CA48ECF9298E}|ASTARION\\ASTARION.csproj|solutionrelative:astarion\\a-star\\testcase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68F8BE13-8066-49D6-A7F6-CA48ECF9298E}|ASTARION\\ASTARION.csproj|c:\\users\\raim\\desktop\\programmingactivities\\9 design and algorithm analysis\\astarion\\project astarion\\astarion\\astarion\\a-star\\sequentialtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68F8BE13-8066-49D6-A7F6-CA48ECF9298E}|ASTARION\\ASTARION.csproj|solutionrelative:astarion\\a-star\\sequentialtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68F8BE13-8066-49D6-A7F6-CA48ECF9298E}|ASTARION\\ASTARION.csproj|c:\\users\\raim\\desktop\\programmingactivities\\9 design and algorithm analysis\\astarion\\project astarion\\astarion\\astarion\\a-star\\menusystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68F8BE13-8066-49D6-A7F6-CA48ECF9298E}|ASTARION\\ASTARION.csproj|solutionrelative:astarion\\a-star\\menusystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68F8BE13-8066-49D6-A7F6-CA48ECF9298E}|ASTARION\\ASTARION.csproj|c:\\users\\raim\\desktop\\programmingactivities\\9 design and algorithm analysis\\astarion\\project astarion\\astarion\\astarion\\a-star\\node.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68F8BE13-8066-49D6-A7F6-CA48ECF9298E}|ASTARION\\ASTARION.csproj|solutionrelative:astarion\\a-star\\node.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +42,110 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "DynamicTest.cs",
+              "DocumentMoniker": "C:\\Users\\Raim\\Desktop\\programmingactivities\\9 DESIGN AND ALGORITHM ANALYSIS\\ASTARION\\PROJECT ASTARION\\ASTARION\\ASTARION\\A-STAR\\DynamicTest.cs",
+              "RelativeDocumentMoniker": "ASTARION\\A-STAR\\DynamicTest.cs",
+              "ToolTip": "C:\\Users\\Raim\\Desktop\\programmingactivities\\9 DESIGN AND ALGORITHM ANALYSIS\\ASTARION\\PROJECT ASTARION\\ASTARION\\ASTARION\\A-STAR\\DynamicTest.cs",
+              "RelativeToolTip": "ASTARION\\A-STAR\\DynamicTest.cs",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAcwBwAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T04:46:03.592Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MenuSystem.cs",
+              "DocumentMoniker": "C:\\Users\\Raim\\Desktop\\programmingactivities\\9 DESIGN AND ALGORITHM ANALYSIS\\ASTARION\\PROJECT ASTARION\\ASTARION\\ASTARION\\A-STAR\\MenuSystem.cs",
+              "RelativeDocumentMoniker": "ASTARION\\A-STAR\\MenuSystem.cs",
+              "ToolTip": "C:\\Users\\Raim\\Desktop\\programmingactivities\\9 DESIGN AND ALGORITHM ANALYSIS\\ASTARION\\PROJECT ASTARION\\ASTARION\\ASTARION\\A-STAR\\MenuSystem.cs",
+              "RelativeToolTip": "ASTARION\\A-STAR\\MenuSystem.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T04:47:10.781Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Raim\\Desktop\\programmingactivities\\9 DESIGN AND ALGORITHM ANALYSIS\\ASTARION\\PROJECT ASTARION\\ASTARION\\ASTARION\\A-STAR\\Program.cs",
               "RelativeDocumentMoniker": "ASTARION\\A-STAR\\Program.cs",
               "ToolTip": "C:\\Users\\Raim\\Desktop\\programmingactivities\\9 DESIGN AND ALGORITHM ANALYSIS\\ASTARION\\PROJECT ASTARION\\ASTARION\\ASTARION\\A-STAR\\Program.cs",
               "RelativeToolTip": "ASTARION\\A-STAR\\Program.cs",
-              "ViewState": "AgIAAP0AAAAAAAAAAAAYwMsAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAAowDcAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-01T18:12:22.214Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SequentialTest.cs",
+              "DocumentMoniker": "C:\\Users\\Raim\\Desktop\\programmingactivities\\9 DESIGN AND ALGORITHM ANALYSIS\\ASTARION\\PROJECT ASTARION\\ASTARION\\ASTARION\\A-STAR\\SequentialTest.cs",
+              "RelativeDocumentMoniker": "ASTARION\\A-STAR\\SequentialTest.cs",
+              "ToolTip": "C:\\Users\\Raim\\Desktop\\programmingactivities\\9 DESIGN AND ALGORITHM ANALYSIS\\ASTARION\\PROJECT ASTARION\\ASTARION\\ASTARION\\A-STAR\\SequentialTest.cs",
+              "RelativeToolTip": "ASTARION\\A-STAR\\SequentialTest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T04:45:05.464Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Grid.cs",
+              "DocumentMoniker": "C:\\Users\\Raim\\Desktop\\programmingactivities\\9 DESIGN AND ALGORITHM ANALYSIS\\ASTARION\\PROJECT ASTARION\\ASTARION\\ASTARION\\A-STAR\\Grid.cs",
+              "RelativeDocumentMoniker": "ASTARION\\A-STAR\\Grid.cs",
+              "ToolTip": "C:\\Users\\Raim\\Desktop\\programmingactivities\\9 DESIGN AND ALGORITHM ANALYSIS\\ASTARION\\PROJECT ASTARION\\ASTARION\\ASTARION\\A-STAR\\Grid.cs",
+              "RelativeToolTip": "ASTARION\\A-STAR\\Grid.cs",
+              "ViewState": "AgIAAI8AAAAAAAAAAAAMwJwAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T04:32:39.873Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ShortestPathTest.cs",
+              "DocumentMoniker": "C:\\Users\\Raim\\Desktop\\programmingactivities\\9 DESIGN AND ALGORITHM ANALYSIS\\ASTARION\\PROJECT ASTARION\\ASTARION\\ASTARION\\A-STAR\\ShortestPathTest.cs",
+              "RelativeDocumentMoniker": "ASTARION\\A-STAR\\ShortestPathTest.cs",
+              "ToolTip": "C:\\Users\\Raim\\Desktop\\programmingactivities\\9 DESIGN AND ALGORITHM ANALYSIS\\ASTARION\\PROJECT ASTARION\\ASTARION\\ASTARION\\A-STAR\\ShortestPathTest.cs*",
+              "RelativeToolTip": "ASTARION\\A-STAR\\ShortestPathTest.cs*",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAgwBsAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T04:35:56.49Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TestCase.cs",
+              "DocumentMoniker": "C:\\Users\\Raim\\Desktop\\programmingactivities\\9 DESIGN AND ALGORITHM ANALYSIS\\ASTARION\\PROJECT ASTARION\\ASTARION\\ASTARION\\A-STAR\\TestCase.cs",
+              "RelativeDocumentMoniker": "ASTARION\\A-STAR\\TestCase.cs",
+              "ToolTip": "C:\\Users\\Raim\\Desktop\\programmingactivities\\9 DESIGN AND ALGORITHM ANALYSIS\\ASTARION\\PROJECT ASTARION\\ASTARION\\ASTARION\\A-STAR\\TestCase.cs",
+              "RelativeToolTip": "ASTARION\\A-STAR\\TestCase.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T04:34:29.486Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Node.cs",
+              "DocumentMoniker": "C:\\Users\\Raim\\Desktop\\programmingactivities\\9 DESIGN AND ALGORITHM ANALYSIS\\ASTARION\\PROJECT ASTARION\\ASTARION\\ASTARION\\A-STAR\\Node.cs",
+              "RelativeDocumentMoniker": "ASTARION\\A-STAR\\Node.cs",
+              "ToolTip": "C:\\Users\\Raim\\Desktop\\programmingactivities\\9 DESIGN AND ALGORITHM ANALYSIS\\ASTARION\\PROJECT ASTARION\\ASTARION\\ASTARION\\A-STAR\\Node.cs",
+              "RelativeToolTip": "ASTARION\\A-STAR\\Node.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T04:31:41.807Z",
               "EditorCaption": ""
             }
           ]
