@@ -28,16 +28,16 @@ namespace ASTARION.A_STAR
 
         public void Draw()
         {
-            const int startY = 200;
-            const int optionHeight = 40;
+            const int startY = 300;
+            const int optionHeight = 50;
 
             for (int i = 0; i < _options.Count; i++)
             {
                 Color color = i == _selectedIndex ? Color.RED : Color.BLACK;
-                Raylib.DrawText(_options[i], 400, startY + i * optionHeight, 30, color);
+                Raylib.DrawText(_options[i], 300, startY + i * optionHeight, 40, color);
             }
 
-            Raylib.DrawText("Use ARROW KEYS to select, ENTER to confirm", 300, 400, 20, Color.BLACK);
+            Raylib.DrawText("Use ARROW KEYS to select, ENTER to confirm", 250, 600, 20, Color.BLACK);
         }
 
         public int SelectedIndex => _selectedIndex;
