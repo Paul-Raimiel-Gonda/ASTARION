@@ -2,147 +2,120 @@
 using Raylib_cs;
 using System.Diagnostics;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Numerics;
 
 namespace ASTARION.A_STAR
 {
     public class DynamicTest : TestCase
     {
-        private Random _random = new Random();
-        private List<Vector2> _modifiedCells = new List<Vector2>();
+        private Node _entityPos;
+        private Vector2 _npcPos;
         private int _changeCounter;
-        private float _timer;
-        private int _currentStep;
+
+        // Overlay dimensions
+        private const int OverlayWidth = 350;
+        private const int OverlayHeight = 130;
 
         public override void Initialize()
         {
             var sw = Stopwatch.StartNew();
 
             int[,] gridData = {
+                {0,1,0,0,1,0},
                 {0,0,0,0,0,0},
-                {0,0,0,0,0,0},
-                {0,0,0,0,0,0},
-                {0,0,0,0,0,0},
-                {0,0,0,0,0,0},
-                {0,0,0,0,0,0}
+                {1,0,0,0,1,0},
+                {0,0,1,0,0,0},
+                {1,0,0,0,1,0},
+                {0,0,1,0,0,0}
             };
 
             Grid = new Grid(gridData);
             Start = Grid.Nodes[0, 0];
-            Targets = new List<Node> { Grid.Nodes[4, 4] };
+            Targets = new List<Node> { Grid.Nodes[5, 5] };
 
-            Path = Grid.FindPath(Start, Targets[0]);
+            _npcPos = new Vector2(0, 3);
+            Grid.Nodes[(int)_npcPos.X, (int)_npcPos.Y].Walkable = false;
+
+            _entityPos = Start;
+
+            Path = Grid.FindPath(_entityPos, Targets[0]);
+            Path?.TrimExcess();
 
             sw.Stop();
             ExecutionTimeMs = sw.ElapsedMilliseconds;
-            CalculateMetrics();
-
             _changeCounter = 0;
-            _timer = 0;
-            _currentStep = 0;
         }
 
         public override void Update()
         {
-            if (Path == null || _changeCounter >= 100) return;
+            if (!Raylib.IsKeyPressed(KeyboardKey.KEY_SPACE))
+                return;
 
-            _timer += Raylib.GetFrameTime();
-            if (_timer >= 0.3f)
-            {
-                ModifyGrid();
-                RecalculatePath();
-                _changeCounter++;
-                _timer = 0;
-            }
-        }
+            if (_entityPos.Equals(Targets[0]))
+                return;
 
-        private void ModifyGrid()
-        {
-            for (int i = 0; i < 3; i++)
-            {
-                int x = _random.Next(Grid.Width);
-                int y = _random.Next(Grid.Height);
-
-                if (Grid.Nodes[x, y] == Start || Grid.Nodes[x, y] == Targets[0])
-                    continue;
-
-                Grid.Nodes[x, y].Walkable = !Grid.Nodes[x, y].Walkable;
-                _modifiedCells.Add(new Vector2(x, y));
-            }
-        }
-
-        private void RecalculatePath()
-        {
-            Node currentPosition = Path != null && _currentStep < Path.Count ?
-                Path[_currentStep] :
-                Start;
-
-            Path = Grid.FindPath(currentPosition, Targets[0]);
-            _currentStep = 0;
-        }
-
-        public override void Draw(int cellSize)
-        {
-            // Draw grid
+            // Reset Parent pointers to avoid stale chains
             for (int x = 0; x < Grid.Width; x++)
             {
                 for (int y = 0; y < Grid.Height; y++)
                 {
-                    Color color = Grid.Nodes[x, y].Walkable ?
-                        Color.LIGHTGRAY : Color.DARKGRAY;
-
-                    if (x == Start.X && y == Start.Y) color = Color.GREEN;
-                    else if (x == Targets[0].X && y == Targets[0].Y) color = Color.RED;
-
-                    Raylib.DrawRectangle(x * cellSize, y * cellSize,
-                        cellSize - 2, cellSize - 2, color);
+                    Grid.Nodes[x, y].Parent = null;
                 }
             }
 
-            // Draw modified cells
-            foreach (Vector2 cell in _modifiedCells)
+            // Move NPC and ensure revert on dead-end
+            var oldNpc = _npcPos;
+            Grid.Nodes[(int)_npcPos.X, (int)_npcPos.Y].Walkable = true;
+            _npcPos.X = (_npcPos.X + 1) % Grid.Width;
+            Grid.Nodes[(int)_npcPos.X, (int)_npcPos.Y].Walkable = false;
+
+            var newPath = Grid.FindPath(_entityPos, Targets[0]);
+            if (newPath == null || newPath.Count <= 1)
             {
-                Raylib.DrawRectangle(
-                    (int)cell.X * cellSize,
-                    (int)cell.Y * cellSize,
-                    cellSize - 2,
-                    cellSize - 2,
-                    new Color(255, 0, 0, 128)
-                );
+                // revert NPC if no progress
+                Grid.Nodes[(int)_npcPos.X, (int)_npcPos.Y].Walkable = true;
+                _npcPos = oldNpc;
+                Grid.Nodes[(int)_npcPos.X, (int)_npcPos.Y].Walkable = false;
+                return;
             }
 
-            // Draw path
-            if (Path != null)
-            {
-                foreach (Node node in Path)
+            Path = newPath;
+            Path.TrimExcess();
+
+            _entityPos = Path[1];
+            _changeCounter++;
+        }
+
+        public override void Draw(int cellSize)
+        {
+            for (int x = 0; x < Grid.Width; x++)
+                for (int y = 0; y < Grid.Height; y++)
                 {
-                    if (node.Equals(Start) || node.Equals(Targets[0])) continue;
-                    Raylib.DrawRectangle(node.X * cellSize, node.Y * cellSize,
-                        cellSize - 2, cellSize - 2, Color.BLUE);
+                    Color color = Grid.Nodes[x, y].Walkable ? Color.LIGHTGRAY : Color.DARKGRAY;
+                    if (x == Start.X && y == Start.Y)
+                        color = Color.GREEN;
+                    else if (x == Targets[0].X && y == Targets[0].Y)
+                        color = Color.PURPLE;
+                    Raylib.DrawRectangle(x * cellSize, y * cellSize, cellSize - 2, cellSize - 2, color);
                 }
-            }
 
-            // Draw entity
-            if (Path != null && _currentStep < Path.Count)
-            {
-                Node current = Path[_currentStep];
-                Raylib.DrawCircle(
-                    current.X * cellSize + cellSize / 2,
-                    current.Y * cellSize + cellSize / 2,
-                    cellSize / 3,
-                    Color.ORANGE
-                );
-                _currentStep++;
-            }
+            if (Path != null)
+                for (int i = 1; i < Path.Count - 1; i++)
+                {
+                    var node = Path[i];
+                    Raylib.DrawRectangle(node.X * cellSize, node.Y * cellSize, cellSize - 2, cellSize - 2, Color.BLUE);
+                }
 
-            // Draw metrics
-            Raylib.DrawRectangle(0, 0, 300, 100, new Color(255, 255, 255, 200));
-            Raylib.DrawText($"Changes: {_changeCounter}", 10, 10, 20, Color.BLACK);
-            Raylib.DrawText($"Path Length: {Path?.Count ?? 0}", 10, 40, 20, Color.BLACK);
-            Raylib.DrawText($"Time: {ExecutionTimeMs}ms", 10, 70, 20, Color.BLACK);
+            Raylib.DrawRectangle((int)_npcPos.X * cellSize, (int)_npcPos.Y * cellSize, cellSize - 2, cellSize - 2, Color.RED);
+            Raylib.DrawCircle(_entityPos.X * cellSize + cellSize / 2, _entityPos.Y * cellSize + cellSize / 2, cellSize / 3, Color.ORANGE);
+
+            int overlayX = Raylib.GetScreenWidth() - OverlayWidth - 10;
+            int overlayY = Raylib.GetScreenHeight() - OverlayHeight - 10;
+            Raylib.DrawRectangle(overlayX, overlayY, OverlayWidth, OverlayHeight, new Color(255, 255, 255, 220));
+            Raylib.DrawText("Press SPACE to step", overlayX + 10, overlayY + 10, 20, Color.BLACK);
+            Raylib.DrawText($"Moves: {_changeCounter}", overlayX + 10, overlayY + 40, 20, Color.BLACK);
+            Raylib.DrawText($"Path Length: {Path?.Count ?? 0}", overlayX + 10, overlayY + 70, 20, Color.BLACK);
+            Raylib.DrawText($"NPC Pos: ({(int)_npcPos.X},{(int)_npcPos.Y})", overlayX + 10, overlayY + 100, 20, Color.BLACK);
         }
     }
 }
